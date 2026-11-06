@@ -1,0 +1,157 @@
+--create table dimgeography 
+if OBJECT_ID('dbo.bronze_geo', 'U') is not null
+drop table dbo.bronze_geo
+create table dbo.bronze_geo(
+GeographyKey nvarchar(50),
+Region nvarchar(50),
+Country nvarchar(50),
+City nvarchar(50),
+AOVIndex nvarchar(50),
+ShippingCostIndex nvarchar(50),
+ExpectedOnTimeRate nvarchar(50)
+);
+--create table dimfullfillment
+if OBJECT_ID('dbo.bronze_fullfilment', 'U') is not null
+drop table dbo.bronze_fullfilment
+CREATE TABLE dbo.bronze_fullfilment(
+FulfillmentKey nvarchar(50),
+FulfillmentModel nvarchar(50),
+FulfillmentCenter nvarchar(50),
+Carrier nvarchar(50),
+ServiceLevel nvarchar(50),
+BasePromisedDays nvarchar(50),
+CostIndex nvarchar(50)
+);
+
+--create table dimpromotion
+if OBJECT_ID('dbo.bronze_Promotion', 'U') is not null
+drop table dbo.bronze_Promotion
+create table dbo.bronze_promotion(
+PromotionKey nvarchar(50),
+PromotionObjective nvarchar(50),
+Campaign nvarchar(50),
+DiscountType nvarchar(50),
+DefaultDiscountRate nvarchar(50),
+FreeShippingFlag nvarchar(50),
+TrafficQuality nvarchar(50)
+);
+
+--create table dimreturnreason
+if OBJECT_ID('dbo.bronze_return', 'U') is not null
+drop table dbo.bronze_return
+create table dbo.bronze_return(
+ReturnReasonKey nvarchar(50),
+ReturnReasonGroup nvarchar(50),
+ReturnReason nvarchar(50),
+InventoryRecoveryRate nvarchar(50)
+);
+
+--create table dimsales channel
+if OBJECT_ID('dbo.bronze_saleschannel', 'U') is not null
+drop table dbo.bronze_saleschannel
+create table dbo.bronze_saleschannel(
+SalesChannelKey nvarchar(50),
+ChannelGroup nvarchar(50),
+SalesChannel	 nvarchar(50),
+DeviceType nvarchar(50),
+PaymentFeeRate nvarchar(50)
+);
+
+--create table factsales
+if OBJECT_ID('dbo.bronze_factsales', 'U') is not null
+drop table dbo.bronze_factsales
+create table dbo.bronze_factsales(
+LineID nvarchar(50),
+OrderID nvarchar(50),
+OrderDateKey DATE,
+ShipDateKey DATE,
+DeliveryDateKey DATE,
+ReturnDateKey DATE,
+ProductKey  nvarchar(50),
+CustomerKey nvarchar(50),
+GeographyKey nvarchar(50),
+PromotionKey nvarchar(50),
+FulfillmentKey nvarchar(50),
+SalesChannelKey nvarchar(50),
+ReturnReasonKey	 nvarchar(50),
+CohortAgeKey nvarchar(50),
+OrderStatus	 nvarchar(50),
+OrderedQuantity nvarchar(50),
+FulfilledQuantity nvarchar(50),
+ReturnedQuantity nvarchar(50),
+OpeningStockUnits nvarchar(50),
+StockStatus	nvarchar(50),
+UnitListPrice nvarchar(50),
+UnitCost nvarchar(50),
+AppliedDiscountPct nvarchar(50),
+ReturnRecoveryPct nvarchar(50),
+GrossSales nvarchar(50),
+DiscountAmount nvarchar(50),
+SalesBeforeReturns nvarchar(50),
+RefundAmount nvarchar(50),
+NetSales nvarchar(50),
+ShippingRevenue nvarchar(50),
+ProductCost nvarchar(50),
+OutboundShippingCost nvarchar(50),
+ReturnShippingCost nvarchar(50),
+FulfillmentCost nvarchar(50),
+PaymentFee nvarchar(50),
+AllocatedMarketingCost nvarchar(50),
+ReturnProcessingCost nvarchar(50),
+ContributionRevenue nvarchar(50),
+ContributionMargin nvarchar(50),
+LostSalesValue	nvarchar(50),
+ReturnLoss nvarchar(50),
+PromisedDeliveryDays nvarchar(50),
+ActualDeliveryDays nvarchar(50),
+OnTimeFlag nvarchar(50),
+IsPromoted nvarchar(50),
+Currency nvarchar(50)
+);
+
+--CREATE TABLE DIMAGE
+IF OBJECT_ID('dbo.bronze.dimage', 'U') IS NOT NULL
+DROP TABLE dbo.bronze_dimage
+create table dbo.bronze_dimage(
+CohortAgeKey nvarchar(50),
+MonthsSinceFirstPurchase nvarchar(50),
+CohortAgeLabel nvarchar(50),
+LifecycleStage nvarchar(50)
+);
+
+--create table dimcustomer 
+IF OBJECT_ID('dbo.bronze.dimcustomer', 'U') IS NOT NULL
+DROP TABLE dbo.bronze_dimcustomer
+create table dbo.bronze_dimcustomer(
+CustomerKey nvarchar(50),
+CustomerLabel nvarchar(50),
+CustomerSegment nvarchar(50),
+LoyaltyTier nvarchar(50),
+AcquisitionChannel nvarchar(50),
+FirstPurchaseDateKey nvarchar(50),
+CohortMonth nvarchar(50),
+CohortYear nvarchar(50),
+CohortQuarter nvarchar(50),
+HomeGeographyKey nvarchar(50),
+PreferredCategory nvarchar(50),
+AgeBand nvarchar(50)
+);
+--create table dimdate
+IF OBJECT_ID('dbo.bronze.dimadate', 'U') IS NOT NULL
+DROP TABLE dbo.bronze_dimdate
+create table dbo.bronze_dimdate(
+DateKey DATE,
+Dates DATE,
+Years	NVARCHAR(50),
+Quarters NVARCHAR(50),
+YearQuarter NVARCHAR(50),
+MonthNumber NVARCHAR(50),
+Months NVARCHAR(50),
+YearMonth NVARCHAR(50),
+WeekNumber NVARCHAR(50),
+YearWeek NVARCHAR(50),
+Dayss NVARCHAR(50),
+DayOfWeekNumber NVARCHAR(50),
+DayOfWeeks NVARCHAR(50),
+DayType NVARCHAR(50)
+);
