@@ -1,0 +1,113 @@
+CREATE OR ALTER PROCEDURE dbo.load_bronze AS
+BEGIN
+  PRINT '===================================';
+  PRINT 'LOADING BRONZE LAYER';
+  PRINT '===================================';
+
+  PRINT '===================================';
+  PRINT 'LOADING ADVENTURE DATA FILES';
+  PRINT '===================================';
+--insert data dimgeography
+PRINT '>>TRUNCATE TABLE:-DIMGEOGRAPHY';
+TRUNCATE TABLE dbo.bronze_geo;
+PRINT '>> INSERTING DATA DIMGEOGRAPHY';
+BULK INSERT dbo.bronze_geo 
+from 'C:\Users\asus\Desktop\adventure\DimGeography.csv'
+with (
+  firstrow = 2,
+  fieldterminator = ',',
+  TABLOCK
+  )
+--insert data dimfullfillment
+PRINT '>>TRUNCATE TABLE:-DIMFULFILLMENT';
+ TRUNCATE TABLE dbo.bronze_fullfilment;
+ PRINT '>> INSERTING DATA DIMFULLFILMENT';
+  BULK INSERT dbo.bronze_fullfilment 
+from 'C:\Users\asus\Desktop\adventure\DimFulfillment.csv'
+with (
+  firstrow = 2,
+  fieldterminator = ',',
+  TABLOCK
+  )
+  --insert data dimpromotion
+  PRINT '>>TRUNCATE TABLE:-DIMPROMOTION';
+  TRUNCATE TABLE  dbo.bronze_promotion;
+  PRINT '>> INSERTING DATA DIMPROMOTION';
+  BULK INSERT dbo.bronze_promotion 
+from 'C:\Users\asus\Desktop\adventure\DimPromotion.csv'
+with (
+  firstrow = 2,
+  fieldterminator = ',',
+  TABLOCK
+  )
+  --insert data return reason
+  PRINT '>>TRUNCATE TABLE:-DIMRETURN';
+  TRUNCATE TABLE dbo.bronze_return;
+  PRINT '>> INSERTING DATA DIMRETURN';
+   BULK INSERT dbo.bronze_return 
+from 'C:\Users\asus\Desktop\adventure\DimReturnReason.csv'
+with (
+  firstrow = 2,
+  fieldterminator = ',',
+  TABLOCK
+  )
+
+  --insert data dimsales channel
+  PRINT '>>TRUNCATE TABLE:-DIMSALESCHANNEL';
+  TRUNCATE TABLE dbo.bronze_saleschannel;
+  PRINT '>> INSERTING DATA DIMSALESCHANNEL';
+   BULK INSERT dbo.bronze_saleschannel 
+from 'C:\Users\asus\Desktop\adventure\DimSalesChannel.csv'
+with (
+  firstrow = 2,
+  fieldterminator = ',',
+  TABLOCK
+  )
+
+  --insert data factsales
+  PRINT '>>TRUNCATE TABLE:-FACTSALES';
+  TRUNCATE TABLE dbo.bronze_factsales;
+  PRINT '>> INSERTING DATA FACTSALES';
+   BULK INSERT dbo.bronze_factsales 
+from 'C:\Users\asus\Desktop\adventure\FactOrderLine.csv'
+with (
+  firstrow = 2,
+  fieldterminator = ',',
+  TABLOCK
+  )
+
+  --INSERT BULK DATA DIMAGE
+  PRINT '>>TRUNCATE TABLE:-DIMAGE';
+  TRUNCATE TABLE dbo.bronze_dimage;
+  PRINT '>> INSERTING DATA DIMAGE';
+    BULK INSERT dbo.bronze_dimage 
+from 'C:\Users\asus\Desktop\adventure\DimCohortAge.csv'
+with (
+  firstrow = 2,
+  fieldterminator = ',',
+  TABLOCK
+  )
+
+  --insert data dimcustomer
+  PRINT '>>TRUNCATE TABLE:-DIMCUSTOMER';
+  TRUNCATE TABLE dbo.bronze_dimcustomer;
+  PRINT '>> INSERTING DATA DIMCUSTOMER';
+    BULK INSERT dbo.bronze_dimcustomer 
+from 'C:\Users\asus\Desktop\adventure\DimCustomer.csv'
+with (
+  firstrow = 2,
+  fieldterminator = ',',
+  TABLOCK
+  )
+  --insert data dimdate
+  PRINT '>>TRUNCATE TABLE:-DIMDATE';
+  TRUNCATE TABLE dbo.bronze_dimdate;
+  PRINT '>> INSERTING DATA DIMDATE';
+     BULK INSERT dbo.bronze_dimdate 
+from 'C:\Users\asus\Desktop\adventure\DimDate.csv'
+with (
+  firstrow = 2,
+  fieldterminator = ',',
+  TABLOCK
+  )
+  END
