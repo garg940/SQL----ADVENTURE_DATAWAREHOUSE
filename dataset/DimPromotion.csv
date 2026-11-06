@@ -1,0 +1,11 @@
+PromotionKey,PromotionObjective,Campaign,DiscountType,DefaultDiscountRate,FreeShippingFlag,TrafficQuality
+PR00,No promotion,No promotion,None,0.00%,0,Baseline
+PR01,Retention,Loyalty 10%,Percentage,10.00%,0,High
+PR02,Basket growth,Bundle & Save,Bundle,8.00%,0,High
+PR03,Traffic,Weekend Flash 25%,Percentage,25.00%,0,Low
+PR04,Seasonal demand,Summer Event 15%,Percentage,15.00%,0,Medium
+PR05,Seasonal demand,Holiday Event 20%,Percentage,20.00%,0,Medium
+PR06,Inventory clearance,Clearance 35%,Percentage,35.00%,0,Low
+PR07,Conversion,Free Shipping,Shipping,0.00%,1,Medium
+PR08,Acquisition,Welcome 15%,Percentage,15.00%,0,Medium
+PR09,Retention,VIP Private Sale 12%,Percentage,12.00%,1,High

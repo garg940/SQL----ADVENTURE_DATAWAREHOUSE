@@ -1,0 +1,6 @@
+SalesChannelKey,ChannelGroup,SalesChannel,DeviceType,PaymentFeeRate
+SC01,Owned commerce,Website,Desktop,2.4%
+SC02,Owned commerce,Website,Mobile,2.5%
+SC03,Owned commerce,Mobile App,App,2.1%
+SC04,Marketplace,Marketplace,Mixed,8.2%
+SC05,Social commerce,Social Shop,Mobile,5.5%

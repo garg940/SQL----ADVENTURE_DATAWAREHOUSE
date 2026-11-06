@@ -1,0 +1,26 @@
+CohortAgeKey,MonthsSinceFirstPurchase,CohortAgeLabel,LifecycleStage
+0,0,Month 0,Acquisition
+1,1,Month 1,Early repeat
+2,2,Month 2,Early repeat
+3,3,Month 3,Early repeat
+4,4,Month 4,Developing
+5,5,Month 5,Developing
+6,6,Month 6,Developing
+7,7,Month 7,Developing
+8,8,Month 8,Developing
+9,9,Month 9,Developing
+10,10,Month 10,Developing
+11,11,Month 11,Developing
+12,12,Month 12,Developing
+13,13,Month 13,Mature
+14,14,Month 14,Mature
+15,15,Month 15,Mature
+16,16,Month 16,Mature
+17,17,Month 17,Mature
+18,18,Month 18,Mature
+19,19,Month 19,Mature
+20,20,Month 20,Mature
+21,21,Month 21,Mature
+22,22,Month 22,Mature
+23,23,Month 23,Mature
+24,24,24+ months,Mature

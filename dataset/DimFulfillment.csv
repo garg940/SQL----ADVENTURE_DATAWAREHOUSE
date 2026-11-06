@@ -1,0 +1,7 @@
+FulfillmentKey,FulfillmentModel,FulfillmentCenter,Carrier,ServiceLevel,BasePromisedDays,CostIndex
+F01,Owned network,Berlin FC,DHL,Standard,3,1.00x
+F02,Owned network,Warsaw FC,DPD,Standard,3,0.93x
+F03,Owned network,Riga FC,Omniva,Economy,3,0.78x
+F04,3PL,Madrid Hub,GLS,Standard,4,1.14x
+F05,3PL,Amsterdam Hub,DHL,Express,2,1.42x
+F06,Marketplace,Partner fulfilled,Local carrier,Marketplace Standard,5,1.22x

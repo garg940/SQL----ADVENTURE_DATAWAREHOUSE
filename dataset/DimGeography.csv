@@ -1,0 +1,25 @@
+GeographyKey,Region,Country,City,AOVIndex,ShippingCostIndex,ExpectedOnTimeRate
+G001,Western Europe,Germany,Berlin,1.00x,1.00x,97.0%
+G002,Western Europe,Germany,Munich,1.04x,1.00x,97.0%
+G003,Western Europe,France,Paris,1.06x,1.04x,94.0%
+G004,Western Europe,France,Lyon,1.00x,1.03x,95.0%
+G005,Western Europe,Netherlands,Amsterdam,1.05x,0.97x,98.0%
+G006,Western Europe,Netherlands,Rotterdam,0.99x,0.96x,98.0%
+G007,United Kingdom,United Kingdom,London,1.12x,1.11x,94.0%
+G008,United Kingdom,United Kingdom,Manchester,1.01x,1.09x,93.0%
+G009,Nordics,Sweden,Stockholm,1.13x,1.25x,96.0%
+G010,Nordics,Sweden,Gothenburg,1.06x,1.22x,96.0%
+G011,Nordics,Finland,Helsinki,1.10x,1.28x,95.0%
+G012,Nordics,Finland,Tampere,1.03x,1.25x,95.0%
+G013,Southern Europe,Spain,Madrid,0.94x,1.12x,89.0%
+G014,Southern Europe,Spain,Barcelona,0.98x,1.13x,88.0%
+G015,Southern Europe,Italy,Milan,1.01x,1.17x,87.0%
+G016,Southern Europe,Italy,Rome,0.96x,1.19x,85.0%
+G017,Baltics,Latvia,Riga,0.88x,0.78x,97.0%
+G018,Baltics,Latvia,Daugavpils,0.80x,0.76x,96.0%
+G019,Baltics,Lithuania,Vilnius,0.87x,0.80x,97.0%
+G020,Baltics,Lithuania,Kaunas,0.82x,0.79x,96.0%
+G021,Baltics,Estonia,Tallinn,0.92x,0.83x,98.0%
+G022,Baltics,Estonia,Tartu,0.85x,0.81x,97.0%
+G023,Central Europe,Poland,Warsaw,0.90x,0.85x,94.0%
+G024,Central Europe,Poland,Krakow,0.85x,0.84x,94.0%

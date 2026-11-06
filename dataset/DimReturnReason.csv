@@ -1,0 +1,8 @@
+ReturnReasonKey,ReturnReasonGroup,ReturnReason,InventoryRecoveryRate
+R00,No return,Not returned,100.00%
+R01,Fit / preference,Size or fit issue,88.00%
+R02,Fit / preference,Changed mind,78.00%
+R03,Product quality,Damaged in transit,10.00%
+R04,Product quality,Defective product,0.00%
+R05,Expectation gap,Not as described,55.00%
+R06,Fulfillment issue,Arrived too late,72.00%
